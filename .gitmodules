@@ -13,3 +13,12 @@
 [submodule ".vim/pack/michael/start/dracula"]
 	path = .vim/pack/michael/start/dracula
 	url = https://github.com/dracula/vim
+[submodule ".vim/pack/michael/start/vim-lsc"]
+	path = .vim/pack/michael/start/vim-lsc
+	url = https://github.com/natebosch/vim-lsc.git
+[submodule ".vim/pack/michael/start/vim-polyglot"]
+	path = .vim/pack/michael/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot
+[submodule ".vim/pack/michael/start/vim-tiddlywiki"]
+	path = .vim/pack/michael/start/vim-tiddlywiki
+	url = https://github.com/sukima/vim-tiddlywiki.git
