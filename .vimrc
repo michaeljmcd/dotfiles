@@ -166,29 +166,9 @@ au filetype java setlocal errorformat=[ERROR]\ %f:[%l\\,%v]\ %m
 au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=manual
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
-function! OpenAPIDetect()
-    if getline(1) =~ 'openapi:'
-        let &l:makeprg='spectral lint "' .  expand('%') . '"'
-        setlocal errorformat=%l:%c
-        setlocal errorformat+=\ Linting\ %f
-        setlocal errorformat+=\ %f
-    endif
-endfunction
-
-augroup filetypedetect
-    au BufRead,BufNewFile *.{yml,yaml} call OpenAPIDetect()
-augroup END
-
 " Plugin settings. 
 
-" CtrlP options
-
-"let g:ctrlp_working_path_mode = ''
-
-"nnoremap <A-p> :CtrlPTag<cr>
-"nnoremap <A-b> :CtrlPBuffer<cr>
-
-set guicursor+=a:blinkon0 " this option, strange as it may seem, has a reason: remote desktop suffers when cursors blink.
+"set guicursor+=a:blinkon0 " this option, strange as it may seem, has a reason: remote desktop suffers when cursors blink.
 
 set completefunc=syntaxcomplete#Complete
 set omnifunc=syntaxcomplete#Complete
