@@ -22,3 +22,6 @@
 [submodule ".vim/pack/michael/start/vim-tiddlywiki"]
 	path = .vim/pack/michael/start/vim-tiddlywiki
 	url = https://github.com/sukima/vim-tiddlywiki.git
+[submodule ".vim/pack/michael/start/spectral.vim"]
+	path = .vim/pack/michael/start/spectral.vim
+	url = https://github.com/michaeljmcd/spectral.vim
