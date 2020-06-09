@@ -21,6 +21,9 @@ syntax on
 "colorscheme codeburn
 "coloscheme Base2Tone_MorningLight " A sort of khaki theme
 
+"let ayucolor="light"
+"colorscheme ayu
+
 " Dark themes
 set background=dark
 
