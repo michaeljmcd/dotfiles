@@ -25,3 +25,21 @@
 [submodule ".vim/pack/michael/start/spectral.vim"]
 	path = .vim/pack/michael/start/spectral.vim
 	url = https://github.com/michaeljmcd/spectral.vim
+[submodule ".vim/pack/michael/opt/ayu-vim"]
+	path = .vim/pack/michael/opt/ayu-vim
+	url = https://github.com/ayu-theme/ayu-vim.git
+[submodule ".vim/pack/michael/opt/Base2Tone-vim"]
+	path = .vim/pack/michael/opt/Base2Tone-vim
+	url = https://github.com/atelierbram/Base2Tone-vim.git
+[submodule ".vim/pack/michael/opt/vim-citylights"]
+	path = .vim/pack/michael/opt/vim-citylights
+	url = https://github.com/agreco/vim-citylights.git
+[submodule ".vim/pack/michael/opt/vim-colors-solarized"]
+	path = .vim/pack/michael/opt/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule ".vim/pack/michael/opt/vim-gotham"]
+	path = .vim/pack/michael/opt/vim-gotham
+	url = https://github.com/whatyouhide/vim-gotham.git
+[submodule ".vim/pack/michael/opt/vim-colorschemes"]
+	path = .vim/pack/michael/opt/vim-colorschemes
+	url = https://github.com/flazz/vim-colorschemes.git
