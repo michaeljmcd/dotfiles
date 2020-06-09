@@ -2,7 +2,7 @@ export GOPATH=$HOME/src/go-workspace
 
 export PATH=$PATH:$HOME/local/bin:$HOME/local/opt/helm:$GOPATH/bin:$HOME/local/opt/apache-tinkerpop-gremlin-console-3.4.4/bin
 
-export PATH="$PATH:/home/michael/local/opt/camel-k-client-1.0.0-M2-linux-64bit"
+export PATH="$PATH:$HOME/.local/bin:/home/michael/local/opt/camel-k-client-1.0.0-M2-linux-64bit"
 
 export DOCKER_HOST=tcp://0.0.0.0:2375
 
