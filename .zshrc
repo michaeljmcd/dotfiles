@@ -112,3 +112,4 @@ if [ -x /home/michael/.ciaoroot/1.19.0/build/bin/ciao-env ] ; then
   eval "$(/home/michael/.ciaoroot/1.19.0/build/bin/ciao-env --sh)"
 fi
 # @end(69809661)@ - End of automatically added lines.
+[ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
