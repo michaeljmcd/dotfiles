@@ -43,3 +43,6 @@
 [submodule ".vim/pack/michael/opt/vim-colorschemes"]
 	path = .vim/pack/michael/opt/vim-colorschemes
 	url = https://github.com/flazz/vim-colorschemes.git
+[submodule ".vim/pack/michael/start/surround"]
+	path = .vim/pack/michael/start/surround
+	url = https://tpope.io/vim/surround.git
