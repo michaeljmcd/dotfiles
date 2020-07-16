@@ -7,5 +7,6 @@ cd "$HOME"
 echo "Init submodules"
 yadm submodule update --recursive --init
 
-cd $HOME/.fzf
-./install
+# Run FZF installer.
+
+$HOME/.fzf/install
