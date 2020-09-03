@@ -25,6 +25,12 @@ alias k=kubectl
 #[[ -s /home/jisamm9/.autojump/etc/profile.d/autojump.sh ]] && source /home/jisamm9/.autojump/etc/profile.d/autojump.sh
 #autoload -U compinit && compinit -u
 
+# This detects WSL2 and sets the display as it goes undetected otherwise.
+if [[ $(uname -a) == *"microsoft-standard"* ]]; then
+    export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
+    export LIBGL_ALWAYS_INDIRECT=1
+fi
+
 
 function preview_xml {
     xmllint --format "$1" | pygmentize -l xml | less -R
