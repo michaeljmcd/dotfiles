@@ -1,30 +1,20 @@
 export GOPATH=$HOME/src/go-workspace
 
-export PATH=$PATH:$HOME/local/bin:$HOME/local/opt/helm:$GOPATH/bin:$HOME/local/opt/apache-tinkerpop-gremlin-console-3.4.4/bin
+export PATH=$PATH:$HOME/local/bin:$HOME/.local/bin
 
-export PATH="$PATH:$HOME/.local/bin:/home/michael/local/opt/camel-k-client-1.0.0-M2-linux-64bit"
-
-export DOCKER_HOST=tcp://0.0.0.0:2375
+#export DOCKER_HOST=tcp://0.0.0.0:2375
 
 export EDITOR=vim
 export PAGER=less
 export SHELL=`which zsh`
 export DISPLAY=:0
 
-alias ls="ls --color=auto"
-alias ss="svn stat"
-alias mdbg="rlwrap mdbg"
+#alias ls="ls --color=auto"
 #alias docker="winpty docker"
 #alias docker-compose="winpty docker-compose"
 alias k=kubectl
 
 #eval $(docker-machine env --shell bash)
-
-# Autojump config:
-
-#[[ -s /home/jisamm9/.autojump/etc/profile.d/autojump.sh ]] && source /home/jisamm9/.autojump/etc/profile.d/autojump.sh
-#autoload -U compinit && compinit -u
-
 
 function preview_xml {
     xmllint --format "$1" | pygmentize -l xml | less -R
