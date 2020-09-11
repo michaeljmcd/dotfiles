@@ -1,13 +1,12 @@
 export GOPATH=$HOME/src/go-workspace
 
-export PATH=$PATH:$HOME/local/bin:$HOME/.local/bin
-
+export PATH=$PATH:$HOME/local/bin:$GOPATH/bin:$HOME/.local/bin
+# Enable this only if you don't have WSL2 + Docker Desktop bridge goodness
 #export DOCKER_HOST=tcp://0.0.0.0:2375
 
 export EDITOR=vim
 export PAGER=less
 export SHELL=`which zsh`
-export DISPLAY=:0
 
 #alias ls="ls --color=auto"
 #alias docker="winpty docker"
@@ -15,6 +14,15 @@ export DISPLAY=:0
 alias k=kubectl
 
 #eval $(docker-machine env --shell bash)
+
+export DISPLAY=:0
+
+# This detects WSL2 and sets the display as it goes undetected otherwise.
+if [[ $(uname -a) == *"microsoft-standard"* ]]; then
+    export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
+    export LIBGL_ALWAYS_INDIRECT=1
+fi
+
 
 function preview_xml {
     xmllint --format "$1" | pygmentize -l xml | less -R
@@ -45,7 +53,6 @@ function update_tags {
 
     ctags -R .
 }
-
 
 function page-file {
     filename=${1}
