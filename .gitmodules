@@ -46,3 +46,6 @@
 [submodule ".vim/pack/michael/start/surround"]
 	path = .vim/pack/michael/start/surround
 	url = https://tpope.io/vim/surround.git
+[submodule ".vim/pack/michael/start/drools.vim"]
+	path = .vim/pack/michael/start/drools.vim
+	url = https://github.com/vim-scripts/drools.vim.git
