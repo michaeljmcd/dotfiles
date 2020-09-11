@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/michael/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -95,21 +95,9 @@ source $ZSH/oh-my-zsh.sh
 unsetopt autopushd
 setopt no_share_history
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/michael/.sdkman"
-[[ -s "/home/michael/.sdkman/bin/sdkman-init.sh" ]] && source "/home/michael/.sdkman/bin/sdkman-init.sh"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-fortune
-
-# @begin(69809661)@ - Do not edit these lines - added automatically!
-# You should customize CIAOPATH before this chunk if you place bundles in
-# places other than ~/.ciao
-if [ -x /home/michael/.ciaoroot/1.19.0/build/bin/ciao-env ] ; then
-  eval "$(/home/michael/.ciaoroot/1.19.0/build/bin/ciao-env --sh)"
-fi
-# @end(69809661)@ - End of automatically added lines.
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/jisamm9/.sdkman"
+[[ -s "/Users/jisamm9/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jisamm9/.sdkman/bin/sdkman-init.sh"
+export ZSH_DISABLE_COMPFIX=true
