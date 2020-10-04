@@ -35,13 +35,14 @@ set background=dark
 "colorscheme duotone-darkforest
 "colorscheme duotone-darkspace
 "colorscheme tesla
-colorscheme underwater
+"colorscheme underwater
 "colorscheme nerv-ous
 "colorscheme atom
 "colorscheme citylights " among my favorites
 "colorscheme dracula
 "colorscheme nord
 "colorscheme oldbook
+colorscheme onedark " slate-colored theme
 
 " Green themes
 "colorscheme duotone-darkmeadow
@@ -198,8 +199,10 @@ function! SumSelection() range
     echo system('echo ' . shellescape(@*) . ' | awk ''{total+=$1}END{print total}'' -')
 endfunction
 
+"    'java': '/home/michael/src/open-source/java-language-server/dist/mac/bin/launcher --quiet',
+
 let g:lsc_server_commands = {
-\    'java': '/home/michael/src/open-source/java-language-server/dist/mac/bin/launcher --quiet',
+\    'java': 'jdt-ls.sh',
 \    'clojure': 'clojure-lsp.sh',
 \    'javascript': 'js-ls.sh',
 \    'typescript': 'js-ls.sh',

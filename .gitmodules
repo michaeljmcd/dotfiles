@@ -46,3 +46,6 @@
 [submodule ".vim/pack/michael/start/surround"]
 	path = .vim/pack/michael/start/surround
 	url = https://tpope.io/vim/surround.git
+[submodule ".vim/pack/michael/start/onedark.vim"]
+	path = .vim/pack/michael/start/onedark.vim
+	url = https://github.com/joshdick/onedark.vim.git
