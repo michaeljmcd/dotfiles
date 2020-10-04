@@ -1,7 +1,6 @@
 export GOPATH=$HOME/src/go-workspace
 
 export PATH=$PATH:$HOME/local/bin:$GOPATH/bin:$HOME/.local/bin
-
 # Enable this only if you don't have WSL2 + Docker Desktop bridge goodness
 #export DOCKER_HOST=tcp://0.0.0.0:2375
 
@@ -9,9 +8,7 @@ export EDITOR=vim
 export PAGER=less
 export SHELL=`which zsh`
 
-alias ls="ls --color=auto"
-alias ss="svn stat"
-alias mdbg="rlwrap mdbg"
+#alias ls="ls --color=auto"
 #alias docker="winpty docker"
 #alias docker-compose="winpty docker-compose"
 alias k=kubectl
@@ -56,7 +53,6 @@ function update_tags {
 
     ctags -R .
 }
-
 
 function page-file {
     filename=${1}

@@ -21,8 +21,8 @@ syntax on
 "colorscheme codeburn
 "coloscheme Base2Tone_MorningLight " A sort of khaki theme
 
-"let ayucolor="light"
-"colorscheme ayu
+let ayucolor="dark"
+colorscheme ayu
 
 " Dark themes
 set background=dark
@@ -54,7 +54,8 @@ colorscheme onedark " slate-colored theme
 "colorscheme Tomorrow-Night-Blue
 "colorscheme colorsbox-stblue
 
-set shell=/usr/bin/zsh
+"set shell=/usr/bin/zsh
+set shell=/bin/zsh
 
 set guioptions-=m
 set guioptions-=T
@@ -111,7 +112,7 @@ set wildignore=*.dll,*.pdb,*.nupkg,*.exe,*.jpg,*.png,*.bin,tags,**/target/**,**/
 
 "set grepprg=/home/michael/od/Scripts/projectgrep.sh
 
-set grepprg=rg\ --vimgrep\ --no-heading
+set grepprg=rg\ --vimgrep\ --no-heading\ -g\ !tags
 set grepformat=%f:%l:%c:%m,%f:%l:%m
 
 set path+=.,**
@@ -134,7 +135,8 @@ nmap <leader>e :execute ":find **/" . expand("<cword>") . "." . expand("%:e")<cr
 nmap <leader><Space> :noh<CR>
 
 function! UpdateCtags()
-    :! unctags -R --exclude=target --exclude=build --exclude=node_modules .
+    :! ctags -R --exclude=target --exclude=build --exclude=node_modules .
+    " ctags on my mac == universal ctags. I've installed it as unctags elsewhere.
 endfunction
 
 nmap <leader>t :call UpdateCtags()<cr>
@@ -164,6 +166,9 @@ au FileType qf setlocal wrap linebreak
 
 au filetype java setlocal makeprg=mvn\ -q\ compile\ -f\ pom.xml
 au filetype java setlocal errorformat=[ERROR]\ %f:[%l\\,%v]\ %m
+
+" Detect Drools files
+au bufreadpost,filereadpost *.drl set ft=drools
 
 " https://lornajane.net/posts/2018/vim-settings-for-working-with-yaml
 " add yaml stuffs
@@ -199,13 +204,8 @@ function! SumSelection() range
     echo system('echo ' . shellescape(@*) . ' | awk ''{total+=$1}END{print total}'' -')
 endfunction
 
-"    'java': '/home/michael/src/open-source/java-language-server/dist/mac/bin/launcher --quiet',
-
 let g:lsc_server_commands = {
-\    'java': 'jdt-ls.sh',
-\    'clojure': 'clojure-lsp.sh',
-\    'javascript': 'js-ls.sh',
-\    'typescript': 'js-ls.sh',
+\    'clojure': 'clojure-lsp',
 \ }
 
 let g:lsc_auto_map=v:true
@@ -214,4 +214,3 @@ set rtp+=~/.fzf
 "nmap <leader>p :FZF<CR>
 nmap <leader>p :Files<CR>
 nmap <leader>b :Buffers<CR>
-

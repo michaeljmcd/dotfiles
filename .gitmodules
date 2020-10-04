@@ -49,3 +49,6 @@
 [submodule ".vim/pack/michael/start/onedark.vim"]
 	path = .vim/pack/michael/start/onedark.vim
 	url = https://github.com/joshdick/onedark.vim.git
+[submodule ".vim/pack/michael/start/drools.vim"]
+	path = .vim/pack/michael/start/drools.vim
+	url = https://github.com/vim-scripts/drools.vim.git
