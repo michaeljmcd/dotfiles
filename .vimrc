@@ -7,6 +7,7 @@
 " Basic Editor configuration 
 
 packadd! dracula
+packadd! onedark.vim
 
 filetype plugin on
 filetype detect
