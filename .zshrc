@@ -101,3 +101,5 @@ setopt no_share_history
 export SDKMAN_DIR="/Users/jisamm9/.sdkman"
 [[ -s "/Users/jisamm9/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jisamm9/.sdkman/bin/sdkman-init.sh"
 export ZSH_DISABLE_COMPFIX=true
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
