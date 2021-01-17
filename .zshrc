@@ -98,6 +98,7 @@ setopt no_share_history
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/jisamm9/.sdkman"
-[[ -s "/Users/jisamm9/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jisamm9/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 export ZSH_DISABLE_COMPFIX=true
+[ -f "/home/michael/.ghcup/env" ] && source "/home/michael/.ghcup/env" # ghcup-env
