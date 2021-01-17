@@ -158,6 +158,8 @@ highlight link javaDocTags PreProc
 " Buffer settings
 
 au BufRead,BufNewFile *.xaml         setlocal filetype=xml
+au BufRead,BufNewFile *.aspx         setlocal filetype=xml
+au BufRead,BufNewFile *.ascx         setlocal filetype=xml
 au BufRead,BufNewFile *.json         setlocal filetype=javascript
 au BufRead,BufNewFile *.puml         setlocal filetype=plantuml
 au BufRead,BufNewFile *.sw         setlocal filetype=sw
