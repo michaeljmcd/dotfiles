@@ -185,7 +185,7 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 set completefunc=syntaxcomplete#Complete
 set omnifunc=syntaxcomplete#Complete
 
-let spiralweb_language = "go"
+let spiralweb_language = "clojure"
 let spiralweb_backend = "markdown"
 
 set popt=syntax:n,number:y,duplex:off,paper:letter
