@@ -207,13 +207,23 @@ function! SumSelection() range
     echo system('echo ' . shellescape(@*) . ' | awk ''{total+=$1}END{print total}'' -')
 endfunction
 
-let g:lsc_server_commands = {
-\    'clojure': 'clojure-lsp',
-\ }
-
-let g:lsc_auto_map=v:true
-
 set rtp+=~/.fzf
 "nmap <leader>p :FZF<CR>
 nmap <leader>p :Files<CR>
 nmap <leader>b :Buffers<CR>
+let g:lsc_server_commands = {
+\    'clojure': 'clojure-lsp',
+\    'dhall': 'dhall-lsp-server',
+\ }
+
+" comment the next line to disable automatic format on save
+let g:dhall_format=1
+
+" Always draw sign column. Prevent buffer moving when adding/deleting sign.
+set signcolumn=yes
+
+" Required for operations modifying multiple buffers like rename.
+set hidden
+
+let g:lsc_auto_map=v:true
+
