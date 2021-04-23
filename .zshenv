@@ -98,3 +98,5 @@ function cljs {
 function vmd () {
   pandoc $1 | lynx -stdin
 }
+source "$HOME/.cargo/env"
+if [ -e /Users/jisamm9/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/jisamm9/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
