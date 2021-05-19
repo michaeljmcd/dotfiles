@@ -52,3 +52,6 @@
 [submodule ".vim/pack/michael/start/drools.vim"]
 	path = .vim/pack/michael/start/drools.vim
 	url = https://github.com/vim-scripts/drools.vim.git
+[submodule ".vim/pack/michael/start/jolie.vim"]
+	path = .vim/pack/michael/start/jolie.vim
+	url = https://github.com/michaeljmcd/jolie.vim
