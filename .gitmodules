@@ -52,3 +52,6 @@
 [submodule ".vim/pack/michael/start/drools.vim"]
 	path = .vim/pack/michael/start/drools.vim
 	url = https://github.com/vim-scripts/drools.vim.git
+[submodule ".vim/pack/michael/opt/papercolor-theme"]
+	path = .vim/pack/michael/opt/papercolor-theme
+	url = https://github.com/NLKNguyen/papercolor-theme.git
