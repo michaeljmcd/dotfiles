@@ -15,7 +15,7 @@ alias k=kubectl
 
 #eval $(docker-machine env --shell bash)
 
-export DISPLAY=:0
+#export DISPLAY=:0
 
 # This detects WSL2 and sets the display as it goes undetected otherwise.
 if [[ $(uname -a) == *"microsoft-standard"* ]]; then
@@ -100,3 +100,5 @@ function vmd () {
 }
 source "$HOME/.cargo/env"
 if [ -e /Users/jisamm9/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/jisamm9/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+if [ -e /home/michael/.nix-profile/etc/profile.d/nix.sh ]; then . /home/michael/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+. "$HOME/.cargo/env"
