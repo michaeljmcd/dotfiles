@@ -58,3 +58,9 @@
 [submodule ".vim/pack/michael/start/jolie.vim"]
 	path = .vim/pack/michael/start/vim-jolie
 	url = https://github.com/jolie/vim-jolie
+[submodule ".vim/pack/michael/start/vim-racket"]
+	path = .vim/pack/michael/start/vim-racket
+	url = https://github.com/wlangstroth/vim-racket.git
+[submodule ".vim/pack/michael/opt/tokoynight-vim.git"]
+	path = .vim/pack/michael/opt/tokoynight-vim.git
+	url = https://github.com/ghifarit53/tokyonight-vim.git
