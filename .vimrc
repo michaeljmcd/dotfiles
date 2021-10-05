@@ -22,8 +22,8 @@ syntax on
 "colorscheme codeburn
 "coloscheme Base2Tone_MorningLight " A sort of khaki theme
 
-let ayucolor="dark"
-colorscheme ayu
+"let ayucolor="dark"
+"colorscheme ayu
 
 " Dark themes
 set background=dark
@@ -43,7 +43,8 @@ set background=dark
 "colorscheme dracula
 "colorscheme nord
 "colorscheme oldbook
-colorscheme onedark " slate-colored theme
+"colorscheme onedark " slate-colored theme
+colorscheme tokonight " A slightly more vibrant dark theme.
 
 " Green themes
 "colorscheme duotone-darkmeadow
@@ -92,6 +93,7 @@ set history=1000
 set tags=./tags,tags
 set autoread
 set cryptmethod=blowfish
+set cursorline
 
 set formatoptions+=t
 set formatoptions+=j " Allow comments to be joined cleanly
