@@ -8,11 +8,13 @@ export ZSH=$HOME/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="bureau"
+#ZSH_THEME="bureau"
 #ZSH_THEME="af-magic"
 #ZSH_THEME="risto"
 #ZSH_THEME="spaceship"
 #ZSH_THEME="nox"
+ZSH_THEME="lambda"
+#ZSH_THEME="simple"
 SPACESHIP_BATTERY_SHOW=false
 
 # Uncomment the following line to use case-sensitive completion.
