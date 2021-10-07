@@ -44,7 +44,7 @@ set background=dark
 "colorscheme nord
 "colorscheme oldbook
 "colorscheme onedark " slate-colored theme
-colorscheme tokonight " A slightly more vibrant dark theme.
+colorscheme tokyonight " A slightly more vibrant dark theme.
 
 " Green themes
 "colorscheme duotone-darkmeadow
@@ -197,6 +197,10 @@ let g:ultisnips_java_junit='4'
 let g:pandoc_no_folding = 1
 
 command! -nargs=1 -complete=file Ptab :call ProjectTab(<f-args>) 
+
+function! JCLMode()
+    runtime! plugin/jcl.vim
+endfunction
 
 function! QuickfixTodos()
     cexpr [] " Used to clear quickfix list.
