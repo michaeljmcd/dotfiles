@@ -67,3 +67,6 @@
 [submodule ".vim/pack/michael/start/jcl.vim"]
 	path = .vim/pack/michael/start/jcl.vim
 	url = https://github.com/vim-scripts/jcl.vim.git
+[submodule ".vim/pack/michael/start/janet.vim"]
+	path = .vim/pack/michael/start/janet.vim
+	url = https://github.com/janet-lang/janet.vim.git
