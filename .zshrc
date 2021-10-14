@@ -61,7 +61,7 @@ SPACESHIP_BATTERY_SHOW=false
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git)
 #plugins=(docker emoji kubectl)
-plugins=()
+plugins=(git kubectl fossil)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -119,3 +119,6 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+source /Users/jisamm9/.config/broot/launcher/bash/br
+export PATH="/usr/local/opt/krb5/bin:$PATH"

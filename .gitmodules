@@ -64,3 +64,9 @@
 [submodule ".vim/pack/michael/opt/tokoynight-vim.git"]
 	path = .vim/pack/michael/opt/tokoynight-vim.git
 	url = https://github.com/ghifarit53/tokyonight-vim.git
+[submodule ".vim/pack/michael/start/jcl.vim"]
+	path = .vim/pack/michael/start/jcl.vim
+	url = https://github.com/vim-scripts/jcl.vim.git
+[submodule ".vim/pack/michael/start/janet.vim"]
+	path = .vim/pack/michael/start/janet.vim
+	url = https://github.com/janet-lang/janet.vim.git
