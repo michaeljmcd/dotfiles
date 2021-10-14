@@ -35,7 +35,7 @@ set background=dark
 "colorscheme duotone-darksea
 "colorscheme duotone-darkforest
 "colorscheme duotone-darkspace
-"colorscheme tesla
+colorscheme tesla
 "colorscheme underwater
 "colorscheme nerv-ous
 "colorscheme atom
@@ -44,7 +44,7 @@ set background=dark
 "colorscheme nord
 "colorscheme oldbook
 "colorscheme onedark " slate-colored theme
-colorscheme tokonight " A slightly more vibrant dark theme.
+"colorscheme tokyonight " A slightly more vibrant dark theme.
 
 " Green themes
 "colorscheme duotone-darkmeadow
