@@ -35,12 +35,12 @@ set background=dark
 "colorscheme duotone-darksea
 "colorscheme duotone-darkforest
 "colorscheme duotone-darkspace
-colorscheme tesla
+"colorscheme tesla
 "colorscheme underwater
 "colorscheme nerv-ous
 "colorscheme atom
 "colorscheme citylights " among my favorites
-"colorscheme dracula
+colorscheme dracula
 "colorscheme nord
 "colorscheme oldbook
 "colorscheme onedark " slate-colored theme
