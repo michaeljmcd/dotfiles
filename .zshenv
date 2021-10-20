@@ -1,6 +1,6 @@
 export GOPATH=$HOME/src/go-workspace
 
-export PATH=$PATH:$HOME/local/bin:$GOPATH/bin:$HOME/.local/bin
+export PATH=$PATH:$HOME/local/bin:$GOPATH/bin:$HOME/.local/bin:$HOME/local/games:$HOME/local/opt/racket/bin:$HOME/local/opt/dotnet/5.0
 # Enable this only if you don't have WSL2 + Docker Desktop bridge goodness
 #export DOCKER_HOST=tcp://0.0.0.0:2375
 
@@ -102,3 +102,4 @@ source "$HOME/.cargo/env"
 if [ -e /Users/jisamm9/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/jisamm9/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 if [ -e /home/michael/.nix-profile/etc/profile.d/nix.sh ]; then . /home/michael/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 . "$HOME/.cargo/env"
+export JOLIE_HOME="/home/michael/local/lib/jolie"

@@ -40,11 +40,11 @@ set background=dark
 "colorscheme nerv-ous
 "colorscheme atom
 "colorscheme citylights " among my favorites
-"colorscheme dracula
+colorscheme dracula
 "colorscheme nord
 "colorscheme oldbook
 "colorscheme onedark " slate-colored theme
-colorscheme tokyonight " A slightly more vibrant dark theme.
+"colorscheme tokyonight " A slightly more vibrant dark theme.
 
 " Green themes
 "colorscheme duotone-darkmeadow
