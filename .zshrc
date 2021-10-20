@@ -120,3 +120,5 @@ export NVM_DIR="$HOME/.nvm"
 
 [[ -f '/Users/jisamm9/.config/broot/launcher/bash/br' ]] && source /Users/jisamm9/.config/broot/launcher/bash/br
 export PATH="/usr/local/opt/krb5/bin:$PATH"
+
+command -v starship && eval "$(starship init zsh)"
