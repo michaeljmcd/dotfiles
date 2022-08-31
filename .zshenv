@@ -97,7 +97,7 @@ function vmd () {
   pandoc $1 | lynx -stdin
 }
 source "$HOME/.cargo/env"
-if [ -e /Users/jisamm9/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/jisamm9/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-if [ -e /home/michael/.nix-profile/etc/profile.d/nix.sh ]; then . /home/michael/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+#if [ -e /Users/jisamm9/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/jisamm9/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+#if [ -e /home/michael/.nix-profile/etc/profile.d/nix.sh ]; then . /home/michael/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 . "$HOME/.cargo/env"
 export JOLIE_HOME="/home/michael/local/lib/jolie"
