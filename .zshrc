@@ -59,7 +59,9 @@ SPACESHIP_BATTERY_SHOW=false
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git kubectl fossil)
+plugins=(kubectl fossil)
+
+# Removing git because its aliases mess with Gambit.
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,7 +103,7 @@ unsetopt autopushd
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 export ZSH_DISABLE_COMPFIX=true
-[ -f "/home/michael/.ghcup/env" ] && source "/home/michael/.ghcup/env" # ghcup-env
+#[ -f "/home/michael/.ghcup/env" ] && source "/home/michael/.ghcup/env" # ghcup-env
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -121,4 +123,6 @@ export NVM_DIR="$HOME/.nvm"
 [[ -f '/Users/jisamm9/.config/broot/launcher/bash/br' ]] && source /Users/jisamm9/.config/broot/launcher/bash/br
 export PATH="/usr/local/opt/krb5/bin:$PATH"
 
-command -v starship && eval "$(starship init zsh)"
+#command -v starship && eval "$(starship init zsh)"
+
+[ -f "/home/michael/.ghcup/env" ] && source "/home/michael/.ghcup/env" # ghcup-env
