@@ -70,3 +70,6 @@
 [submodule ".vim/pack/michael/start/janet.vim"]
 	path = .vim/pack/michael/start/janet.vim
 	url = https://github.com/janet-lang/janet.vim.git
+[submodule ".vim/pack/michael/start/vim-iced"]
+	path = .vim/pack/michael/start/vim-iced
+	url = https://github.com/liquidz/vim-iced.git

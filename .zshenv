@@ -13,8 +13,6 @@ export SHELL=`which zsh`
 #alias docker-compose="winpty docker-compose"
 alias k=kubectl
 
-#eval $(docker-machine env --shell bash)
-
 #export DISPLAY=:0
 
 # This detects WSL2 and sets the display as it goes undetected otherwise.

@@ -98,8 +98,9 @@ unsetopt autopushd
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+#export SDKMAN_DIR="$HOME/.sdkman"
+#[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
 export ZSH_DISABLE_COMPFIX=true
 [ -f "/home/michael/.ghcup/env" ] && source "/home/michael/.ghcup/env" # ghcup-env
 
@@ -110,6 +111,7 @@ if [ -f '/Users/jisamm9/local/dist/google-cloud-sdk/path.zsh.inc' ]; then . '/Us
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/jisamm9/local/dist/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jisamm9/local/dist/google-cloud-sdk/completion.zsh.inc'; fi
+#
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
@@ -121,4 +123,10 @@ export NVM_DIR="$HOME/.nvm"
 [[ -f '/Users/jisamm9/.config/broot/launcher/bash/br' ]] && source /Users/jisamm9/.config/broot/launcher/bash/br
 export PATH="/usr/local/opt/krb5/bin:$PATH"
 
-command -v starship && eval "$(starship init zsh)"
+(command -v starship &> /dev/null) && eval "$(starship init zsh)"
+
+#export PATH=$PATH:~/.vim/pack/michael/start/vim-iced/bin
+#eval "$(docker-machine env default)"
+
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
