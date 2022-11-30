@@ -124,6 +124,7 @@ set path+=.,**
 let mapleader = ","
 
 let NERDTreeHijackNetrw=1
+let g:netrw_liststyle=3 " tree listing
 
 nmap <F10> call ToggleQuickfixList()<CR>
 nmap <f2> :NERDTreeToggle<CR>

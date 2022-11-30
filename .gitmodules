@@ -7,9 +7,6 @@
 [submodule ".vim/pack/michael/start/fzf.vim"]
 	path = .vim/pack/michael/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
-[submodule ".vim/pack/michael/start/nerdtree"]
-	path = .vim/pack/michael/start/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
 [submodule ".vim/pack/michael/start/dracula"]
 	path = .vim/pack/michael/start/dracula
 	url = https://github.com/dracula/vim
