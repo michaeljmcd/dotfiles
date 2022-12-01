@@ -118,14 +118,9 @@ set path+=.,**
 " Key mappings
 let mapleader = ","
 
-let NERDTreeHijackNetrw=1
 let g:netrw_liststyle=3 " tree listing
 
-"nmap <F10> call ToggleQuickfixList()<CR>
-"nmap <f2> :NERDTreeToggle<CR>
 nmap <F11> :make!<CR>
-
-" set pastetoggle=<leader>p
 
 nmap <leader>g :execute "grep -w '" . expand("<cword>") . "' ."<CR>
 nmap <leader>f :execute "lgrep -w '" . expand("<cword>") . "' ."<CR>
@@ -198,19 +193,7 @@ function! JCLMode()
     runtime! plugin/jcl.vim
 endfunction
 
-function! QuickfixTodos()
-    cexpr [] " Used to clear quickfix list.
-    g/\(TODO\)\|\(FINISHME\)\|\(FIXME\)/caddexpr expand ("%") . ":" . line(".") . ":" . getline(".")
-endfunction
-
-command! Qtodo :call QuickfixTodos()
-
-function! SumSelection() range
-    echo system('echo ' . shellescape(@*) . ' | awk ''{total+=$1}END{print total}'' -')
-endfunction
-
 set rtp+=~/.fzf
-"nmap <leader>p :FZF<CR>
 nmap <leader>p :Files<CR>
 nmap <leader>b :Buffers<CR>
 let g:lsc_server_commands = {
