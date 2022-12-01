@@ -1,9 +1,3 @@
-" Plugins, with their git urls
-" * Ctrlp (https://github.com/kien/ctrlp.vim.git)
-" * powershell-vim (https://github.com/gabemc/powershell-vim.git)
-" * vim-easytags (https://github.com/xolox/vim-easytags.git)
-" * vim-pandoc (https://github.com/vim-pandoc/vim-pandoc.git)
-
 " Basic Editor configuration 
 
 packadd! dracula
@@ -98,6 +92,9 @@ set cursorline
 set formatoptions+=t
 set formatoptions+=j " Allow comments to be joined cleanly
 
+set signcolumn=yes " Always draw sign column. Prevent buffer moving when adding/deleting sign.
+set hidden " Required for operations modifying multiple buffers like rename.
+
 " backup to ~/.tmp 
 set backup 
 set backupdir=~/.tmp
@@ -113,8 +110,6 @@ set errorformat=\ %#%f(%l\\\,%c):\ %m
 
 set wildignore=*.dll,*.pdb,*.nupkg,*.exe,*.jpg,*.png,*.bin,tags,**/target/**,**/node_modules/**
 
-"set grepprg=/home/michael/od/Scripts/projectgrep.sh
-
 set grepprg=rg\ --vimgrep\ --no-heading\ -g\ !tags
 set grepformat=%f:%l:%c:%m,%f:%l:%m
 
@@ -126,8 +121,8 @@ let mapleader = ","
 let NERDTreeHijackNetrw=1
 let g:netrw_liststyle=3 " tree listing
 
-nmap <F10> call ToggleQuickfixList()<CR>
-nmap <f2> :NERDTreeToggle<CR>
+"nmap <F10> call ToggleQuickfixList()<CR>
+"nmap <f2> :NERDTreeToggle<CR>
 nmap <F11> :make!<CR>
 
 " set pastetoggle=<leader>p
@@ -225,12 +220,6 @@ let g:lsc_server_commands = {
 
 " comment the next line to disable automatic format on save
 let g:dhall_format=1
-
-" Always draw sign column. Prevent buffer moving when adding/deleting sign.
-set signcolumn=yes
-
-" Required for operations modifying multiple buffers like rename.
-set hidden
 
 let g:lsc_auto_map=v:true
 
