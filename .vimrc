@@ -50,7 +50,6 @@ colorscheme dracula
 "colorscheme Tomorrow-Night-Blue
 "colorscheme colorsbox-stblue
 
-"set shell=/usr/bin/zsh
 set shell=/bin/zsh
 
 set guioptions-=m
