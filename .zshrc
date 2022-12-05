@@ -135,3 +135,9 @@ eval "$(jenv init -)"
 #command -v starship && eval "$(starship init zsh)"
 
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
+
+if [ -e "/Users/jisamm9/local/opt/ImageMagick-7.0.10" ]; then
+  export MAGICK_HOME="/Users/jisamm9/local/opt/ImageMagick-7.0.10"
+  export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"
+  export PATH="$PATH:$MAGICK_HOME/bin"
+fi
