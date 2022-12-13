@@ -82,7 +82,7 @@ function import_jdk_cert {
 }
 
 function plantuml {
-    java -jar `cygpath -w ~/h/local/opt/plant*.jar` $*
+    java -jar $HOME/local/opt/plant*.jar $*
 }
 
 function az3 {

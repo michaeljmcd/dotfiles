@@ -12,7 +12,6 @@ syntax on
 "set background=light
 "colorscheme cake16
 "colorscheme warm_grey
-"colorscheme PaperColor
 "colorscheme codeburn
 "coloscheme Base2Tone_MorningLight " A sort of khaki theme
 
@@ -31,19 +30,16 @@ set background=dark
 "colorscheme duotone-darkspace
 "colorscheme tesla
 "colorscheme underwater
-"colorscheme nerv-ous
-"colorscheme atom
+colorscheme nerv-ous
 "colorscheme citylights " among my favorites
-colorscheme dracula
+"colorscheme dracula
 "colorscheme nord
-"colorscheme oldbook
 "colorscheme onedark " slate-colored theme
 "colorscheme tokyonight " A slightly more vibrant dark theme.
 
 " Green themes
 "colorscheme duotone-darkmeadow
 "colorscheme greenvision
-"colorscheme base16-greenscreen
 
 " Blue themes
 "colorscheme blueprint
