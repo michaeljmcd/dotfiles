@@ -30,12 +30,12 @@ set background=dark
 "colorscheme duotone-darkspace
 "colorscheme tesla
 "colorscheme underwater
-colorscheme nerv-ous
+"colorscheme nerv-ous
 "colorscheme citylights " among my favorites
 "colorscheme dracula
 "colorscheme nord
 "colorscheme onedark " slate-colored theme
-"colorscheme tokyonight " A slightly more vibrant dark theme.
+colorscheme tokyonight " A slightly more vibrant dark theme.
 
 " Green themes
 "colorscheme duotone-darkmeadow
@@ -188,16 +188,51 @@ function! JCLMode()
     runtime! plugin/jcl.vim
 endfunction
 
+" FZF Setup
+"
 set rtp+=~/.fzf
 nmap <leader>p :Files<CR>
 nmap <leader>b :Buffers<CR>
+
+" LSC Setup
+
 let g:lsc_server_commands = {
 \    'clojure': 'clojure-lsp',
 \    'dhall': 'dhall-lsp-server',
+\    'java': 'jdtls',
 \ }
-
-" comment the next line to disable automatic format on save
-let g:dhall_format=1
 
 let g:lsc_auto_map=v:true
 
+" Dhall
+"
+" comment the next line to disable automatic format on save
+let g:dhall_format=1
+
+" LSP Setup
+let g:lsp_auto_enable = 1
+let g:lsp_diagnostics_enabled = 0         " disable diagnostics support
+
+if executable('clojure-lsp')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'clojure-lsp',
+        \ 'cmd': ['clojure-lsp'],
+        \ 'allowlist': ['clojure'],
+        \ })
+endif
+
+if executable('jdtls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'jdtls',
+        \ 'cmd': ['jdtls'],
+        \ 'allowlist': ['java'],
+        \ })
+endif
+
+augroup lsp_install
+    au!
+    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
+
+nmap <leader>d :LspDefinition<CR>
+nmap <leader>r :LspReferences<CR>

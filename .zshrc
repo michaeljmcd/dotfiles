@@ -13,10 +13,12 @@ export ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="risto"
 #ZSH_THEME="spaceship"
 #ZSH_THEME="nox"
-#ZSH_THEME="lambda"
+#ZSH_THEME="lambda" # A simple theme with a lambda prompt
 #ZSH_THEME="simple"
-ZSH_THEME="mh"
-SPACESHIP_BATTERY_SHOW=false
+#ZSH_THEME="mh"
+#ZSH_THEME="kolo" # Simple prompt with a % prompt. Only shows current directory name, not full path.
+ZSH_THEME="gentoo"
+#SPACESHIP_BATTERY_SHOW=false
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
