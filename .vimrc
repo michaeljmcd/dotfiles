@@ -229,6 +229,14 @@ if executable('jdtls')
         \ })
 endif
 
+if executable('typescript-language-server')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'typescript-language-server',
+        \ 'cmd': ['typescript-language-server', '--stdio'],
+        \ 'allowlist': ['typescript', 'javascript'],
+        \ })
+endif
+
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
     setlocal signcolumn=yes
