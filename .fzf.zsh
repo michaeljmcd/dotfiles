@@ -10,4 +10,4 @@ fi
 
 # Key bindings
 # ------------
-source "/Users/jisamm9/.fzf/shell/key-bindings.zsh"
+source "/home/michael/.fzf/shell/key-bindings.zsh"
