@@ -107,39 +107,3 @@ unsetopt autopushd
 #[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 export ZSH_DISABLE_COMPFIX=true
-#[ -f "/home/michael/.ghcup/env" ] && source "/home/michael/.ghcup/env" # ghcup-env
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/jisamm9/local/dist/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jisamm9/local/dist/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/jisamm9/local/dist/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jisamm9/local/dist/google-cloud-sdk/completion.zsh.inc'; fi
-#
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-[[ -f '/Users/jisamm9/.config/broot/launcher/bash/br' ]] && source /Users/jisamm9/.config/broot/launcher/bash/br
-export PATH="/usr/local/opt/krb5/bin:$PATH"
-
-#export PATH=$PATH:~/.vim/pack/michael/start/vim-iced/bin
-#eval "$(docker-machine env default)"
-
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
-#
-#command -v starship && eval "$(starship init zsh)"
-
-[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
-
-if [ -e "/Users/jisamm9/local/opt/ImageMagick-7.0.10" ]; then
-  export MAGICK_HOME="/Users/jisamm9/local/opt/ImageMagick-7.0.10"
-  export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"
-  export PATH="$PATH:$MAGICK_HOME/bin"
-fi

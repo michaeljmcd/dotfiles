@@ -1,8 +1,9 @@
 export GOPATH=$HOME/src/go-workspace
+export PATH=$PATH:$HOME/local/bin:$GOPATH/bin:$HOME/.local/bin:$HOME/local/games:$HOME/local/opt/racket/bin:/usr/local/bin
 
-export PATH=$PATH:$HOME/local/bin:$GOPATH/bin:$HOME/.local/bin:$HOME/local/games:$HOME/local/opt/racket/bin:$HOME/local/opt/dotnet/5.0
 # Enable this only if you don't have WSL2 + Docker Desktop bridge goodness
 #export DOCKER_HOST=tcp://0.0.0.0:2375
+#eval "$(docker-machine env default)"
 
 export EDITOR=vim
 export PAGER=less
@@ -21,83 +22,38 @@ if [[ $(uname -a) == *"microsoft-standard"* ]]; then
     export LIBGL_ALWAYS_INDIRECT=1
 fi
 
-
-function preview_xml {
-    xmllint --format "$1" | pygmentize -l xml | less -R
-}
-
-function format_xml {
-    cp =(xmllint --format "$1") "$1"
-}
-
-function view_code {
-    pygmentize -O encoding=utf-8 "$1" | less -R
-}
-
-function xpath_grep {
-    xmlstarlet sel -t -c $1 -n $*[2,${#*}]
-}
-
-function xpath_find {
-    xmlstarlet sel -t -m $1 -n -f $*[2,${#*}]
-}
-
-
-function update_tags {
-    if [ -e tags ]
-    then
-        rm tags
-    fi
-
-    ctags -R .
-}
-
-function page-file {
-    filename=${1}
-
-    find . -name "${1}" | xargs less
-}
-
-function jepoch {
-    input_date=${1}
-
-    in_seconds=`date --date=${input_date} +%s`
-
-    bc -q <<EOF
-    ${in_seconds}*1000
-EOF
-}
-
-function get_cobol {
-    program_path=${1}
-    svn cat svn://svnprod/app_IndexingHostProgramsFtp/baseline/CobolPrograms/host/${program_path} > $(basename $program_path).cbl
-}
-
-function import_jdk_cert {
-    cert_file="${1}"
-    java_home="$(cygpath -w /cygdrive/c/Program\ Files/Java/jdk1.8.0_101/)"
-    jdk_store="${java_home}/jre/lib/security"
-
-    ${java_home}/bin/keytool.exe -importcert -trustcacerts -file ${cert_file} -alias ${cert_file} -keystore "${jdk_store}"
-}
-
-function plantuml {
-    java -jar $HOME/local/opt/plant*.jar $*
-}
-
-function az3 {
-    python3 -m azure.cli $*
-}
-
-function cljs {
-    java -jar `cygpath -w ~/h/local/opt/cljs.jar` $*
-}
-
-function vmd () {
-  pandoc $1 | lynx -stdin
-}
 source "$HOME/.cargo/env"
-#if [ -e /Users/jisamm9/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/jisamm9/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-#if [ -e /home/michael/.nix-profile/etc/profile.d/nix.sh ]; then . /home/michael/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 . "$HOME/.cargo/env"
-export JOLIE_HOME="/home/michael/local/lib/jolie"
+export JOLIE_HOME="$HOME/local/lib/jolie"
+
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '$HOME/local/dist/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/local/dist/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '$HOME/local/dist/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/local/dist/google-cloud-sdk/completion.zsh.inc'; fi
+#
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[[ -f '$HOME/.config/broot/launcher/bash/br' ]] && source $HOME/.config/broot/launcher/bash/br
+export PATH="/usr/local/opt/krb5/bin:$PATH"
+
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
+
+if [ -e "$HOME/local/opt/ImageMagick-7.0.10" ]; then
+  export MAGICK_HOME="$HOME/local/opt/ImageMagick-7.0.10"
+  export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"
+  export PATH="$PATH:$MAGICK_HOME/bin"
+fi

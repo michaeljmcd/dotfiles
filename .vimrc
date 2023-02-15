@@ -110,6 +110,8 @@ set grepformat=%f:%l:%c:%m,%f:%l:%m
 
 set path+=.,**
 
+set guioptions-=e " Workaround for https://github.com/macvim-dev/macvim/issues/1333
+
 " Key mappings
 let mapleader = ","
 
