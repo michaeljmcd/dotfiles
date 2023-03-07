@@ -1,5 +1,5 @@
 export GOPATH=$HOME/src/go-workspace
-export PATH=$PATH:$HOME/local/bin:$GOPATH/bin:$HOME/.local/bin:$HOME/local/games:$HOME/local/opt/racket/bin:/usr/local/bin
+export PATH=$PATH:$HOME/local/bin:$GOPATH/bin:$HOME/.local/bin:$HOME/local/games:$HOME/local/opt/racket/bin:/usr/local/bin:$HOME/local/opt/omnisharp/
 
 # Enable this only if you don't have WSL2 + Docker Desktop bridge goodness
 #export DOCKER_HOST=tcp://0.0.0.0:2375
@@ -13,6 +13,7 @@ export SHELL=`which zsh`
 #alias docker="winpty docker"
 #alias docker-compose="winpty docker-compose"
 alias k=kubectl
+alias docker=podman
 
 #export DISPLAY=:0
 

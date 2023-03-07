@@ -215,6 +215,7 @@ let g:dhall_format=1
 let g:lsp_auto_enable = 1
 let g:lsp_diagnostics_enabled = 0         " disable diagnostics support
 
+" brew install clojure-lsp/brew/clojure-lsp-native   
 if executable('clojure-lsp')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'clojure-lsp',
@@ -223,6 +224,7 @@ if executable('clojure-lsp')
         \ })
 endif
 
+" brew install jdtls
 if executable('jdtls')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'jdtls',
@@ -231,11 +233,30 @@ if executable('jdtls')
         \ })
 endif
 
+" yarn global add typescript-language-server typescript 
 if executable('typescript-language-server')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'typescript-language-server',
         \ 'cmd': ['typescript-language-server', '--stdio'],
         \ 'allowlist': ['typescript', 'javascript'],
+        \ })
+endif
+
+" brew install python-lsp-server
+if executable('pylsp')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'pylsp',
+        \ 'cmd': ['pylsp'],
+        \ 'allowlist': ['python'],
+        \ })
+endif
+
+" Manual download from https://github.com/OmniSharp/omnisharp-roslyn
+if executable("OmniSharp")
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'OmniSharp',
+        \ 'cmd': ['OmniSharp', '--languageserver'],
+        \ 'allowlist': ['cs'],
         \ })
 endif
 
