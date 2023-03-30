@@ -116,11 +116,13 @@ set guioptions-=e " Workaround for https://github.com/macvim-dev/macvim/issues/1
 let mapleader = ","
 
 let g:netrw_liststyle=3 " tree listing
+let g:netrw_fastbrowse=0 " Do not cache directory listings
+autocmd FileType netrw setl bufhidden=wipe " Stop littering my buffer list
 
 nmap <F11> :make!<CR>
 
 nmap <leader>g :execute "grep -w '" . expand("<cword>") . "' ."<CR>
-nmap <leader>f :execute "lgrep -w '" . expand("<cword>") . "' ."<CR>
+"nmap <leader>f :execute "lgrep -w '" . expand("<cword>") . "' ."<CR>
 nmap <leader>e :execute ":find **/" . expand("<cword>") . "." . expand("%:e")<cr>
 
 nmap <leader><Space> :noh<CR>
@@ -231,6 +233,7 @@ if executable('jdtls')
         \ 'cmd': ['jdtls'],
         \ 'allowlist': ['java'],
         \ })
+    autocmd FileType java setlocal omnifunc=lsp#complete
 endif
 
 " yarn global add typescript-language-server typescript 
