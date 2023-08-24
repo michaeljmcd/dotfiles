@@ -79,3 +79,6 @@
 [submodule ".vim/pack/michael/start/vim-dirvish"]
 	path = .vim/pack/michael/start/vim-dirvish
 	url = https://github.com/justinmk/vim-dirvish
+[submodule ".vim/pack/michael/opt/kytonight.vim"]
+	path = .vim/pack/michael/opt/kytonight.vim
+	url = https://github.com/voidekh/kyotonight.vim.git

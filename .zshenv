@@ -37,9 +37,9 @@ if [ -f '$HOME/local/dist/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/local/
 # The next line enables shell command completion for gcloud.
 if [ -f '$HOME/local/dist/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/local/dist/google-cloud-sdk/completion.zsh.inc'; fi
 #
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+#if command -v pyenv 1>/dev/null 2>&1; then
+#  eval "$(pyenv init -)"
+#fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

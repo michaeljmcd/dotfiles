@@ -26,7 +26,6 @@ set background=dark
 "colorscheme solarized
 "colorscheme gotham
 "colorscheme duotone-darksea
-"colorscheme duotone-darkforest
 "colorscheme duotone-darkspace
 "colorscheme tesla
 "colorscheme underwater
@@ -35,16 +34,18 @@ set background=dark
 "colorscheme dracula
 "colorscheme nord
 "colorscheme onedark " slate-colored theme
-colorscheme tokyonight " A slightly more vibrant dark theme.
+"colorscheme tokyonight " A slightly more vibrant dark theme.
+"colorscheme kyotonight 
+colorscheme zaibatsu 
 
 " Green themes
 "colorscheme duotone-darkmeadow
 "colorscheme greenvision
+"colorscheme duotone-darkforest
 
 " Blue themes
 "colorscheme blueprint
 "colorscheme Tomorrow-Night-Blue
-"colorscheme colorsbox-stblue
 
 set shell=/bin/zsh
 
