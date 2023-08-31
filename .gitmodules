@@ -82,3 +82,9 @@
 [submodule ".vim/pack/michael/opt/kytonight.vim"]
 	path = .vim/pack/michael/opt/kytonight.vim
 	url = https://github.com/voidekh/kyotonight.vim.git
+[submodule ".vim/pack/michael/opt/cypher-vim-syntax"]
+	path = .vim/pack/michael/opt/cypher-vim-syntax
+	url = https://github.com/neo4j-contrib/cypher-vim-syntax.git
+[submodule ".vim/pack/michael/start/cypher-vim-syntax"]
+	path = .vim/pack/michael/start/cypher-vim-syntax
+	url = https://github.com/neo4j-contrib/cypher-vim-syntax.git
