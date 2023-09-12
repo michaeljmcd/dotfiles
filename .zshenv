@@ -15,6 +15,8 @@ export SHELL=`which zsh`
 alias k=kubectl
 alias docker=podman
 
+[[ $(whence -v gls) ]] && alias ls="gls --color=auto"
+
 #export DISPLAY=:0
 
 # This detects WSL2 and sets the display as it goes undetected otherwise.
