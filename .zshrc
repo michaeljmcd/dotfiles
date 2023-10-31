@@ -8,7 +8,7 @@ export ZSH=$HOME/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-#ZSH_THEME="bureau"
+ZSH_THEME="bureau"
 #ZSH_THEME="af-magic"
 #ZSH_THEME="risto"
 #ZSH_THEME="spaceship"
@@ -17,7 +17,7 @@ export ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="simple"
 #ZSH_THEME="mh"
 #ZSH_THEME="kolo" # Simple prompt with a % prompt. Only shows current directory name, not full path.
-ZSH_THEME="gentoo"
+#ZSH_THEME="gentoo"
 #SPACESHIP_BATTERY_SHOW=false
 
 # Uncomment the following line to use case-sensitive completion.
@@ -100,10 +100,9 @@ source $ZSH/oh-my-zsh.sh
 unsetopt autopushd
 #setopt no_share_history
 
-[ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
-
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 #export SDKMAN_DIR="$HOME/.sdkman"
 #[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 export ZSH_DISABLE_COMPFIX=true
+autoload zmv

@@ -163,6 +163,9 @@ au FileType qf setlocal wrap linebreak
 au filetype java setlocal makeprg=mvn\ -q\ compile\ -f\ pom.xml
 au filetype java setlocal errorformat=[ERROR]\ %f:[%l\\,%v]\ %m
 
+" Used to enable tag matching for XML.
+runtime macros/matchit.vim
+
 " Detect Drools files
 au bufreadpost,filereadpost *.drl set ft=drools
 
