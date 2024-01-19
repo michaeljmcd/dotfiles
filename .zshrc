@@ -106,3 +106,5 @@ unsetopt autopushd
 
 export ZSH_DISABLE_COMPFIX=true
 autoload zmv
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

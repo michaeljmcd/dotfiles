@@ -25,8 +25,7 @@ if [[ $(uname -a) == *"microsoft-standard"* ]]; then
     export LIBGL_ALWAYS_INDIRECT=1
 fi
 
-source "$HOME/.cargo/env"
-. "$HOME/.cargo/env"
+[ -f "~/.cargo/env" ] && source "$HOME/.cargo/env"
 export JOLIE_HOME="$HOME/local/lib/jolie"
 
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
