@@ -88,6 +88,3 @@
 [submodule ".vim/pack/michael/start/cypher-vim-syntax"]
 	path = .vim/pack/michael/start/cypher-vim-syntax
 	url = https://github.com/neo4j-contrib/cypher-vim-syntax.git
-[submodule ".vim/pack/michael/start/DrawIt"]
-	path = .vim/pack/michael/start/DrawIt
-	url = https://github.com/vim-scripts/DrawIt.git
