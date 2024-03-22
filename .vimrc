@@ -13,7 +13,6 @@ syntax on
 "colorscheme cake16
 "colorscheme warm_grey
 "colorscheme codeburn
-"coloscheme Base2Tone_MorningLight " A sort of khaki theme
 
 "let ayucolor="dark"
 "colorscheme ayu
@@ -34,8 +33,8 @@ set background=dark
 "colorscheme citylights " among my favorites
 "colorscheme dracula
 "colorscheme nord
-"colorscheme onedark " slate-colored theme
-colorscheme tokyonight " A slightly more vibrant dark theme.
+colorscheme onedark " slate-colored theme
+"colorscheme tokyonight " A slightly more vibrant dark theme.
 
 " Green themes
 "colorscheme duotone-darkmeadow
@@ -84,7 +83,7 @@ set autoread
 set cryptmethod=blowfish
 set cursorline
 
-set formatoptions+=t
+set formatoptions+=t " Autowrap to textwidth
 set formatoptions+=j " Allow comments to be joined cleanly
 
 set signcolumn=yes " Always draw sign column. Prevent buffer moving when adding/deleting sign.
@@ -105,8 +104,8 @@ set errorformat=\ %#%f(%l\\\,%c):\ %m
 
 set wildignore=*.dll,*.pdb,*.nupkg,*.exe,*.jpg,*.png,*.bin,tags,**/target/**,**/node_modules/**
 
-set grepprg=rg\ --vimgrep\ --no-heading\ -g\ !tags
-set grepformat=%f:%l:%c:%m,%f:%l:%m
+"set grepprg=rg\ --vimgrep\ --no-heading\ -g\ !tags
+"set grepformat=%f:%l:%c:%m,%f:%l:%m
 
 set path+=.,**
 
