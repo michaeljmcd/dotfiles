@@ -25,7 +25,6 @@ set background=dark
 "colorscheme solarized
 "colorscheme gotham
 "colorscheme duotone-darksea
-"colorscheme duotone-darkforest
 "colorscheme duotone-darkspace
 "colorscheme tesla
 "colorscheme underwater
@@ -33,17 +32,19 @@ set background=dark
 "colorscheme citylights " among my favorites
 "colorscheme dracula
 "colorscheme nord
-colorscheme onedark " slate-colored theme
+"colorscheme onedark " slate-colored theme
 "colorscheme tokyonight " A slightly more vibrant dark theme.
+"colorscheme kyotonight 
+colorscheme zaibatsu 
 
 " Green themes
 "colorscheme duotone-darkmeadow
 "colorscheme greenvision
+"colorscheme duotone-darkforest
 
 " Blue themes
 "colorscheme blueprint
 "colorscheme Tomorrow-Night-Blue
-"colorscheme colorsbox-stblue
 
 set shell=/bin/zsh
 
@@ -109,15 +110,18 @@ set wildignore=*.dll,*.pdb,*.nupkg,*.exe,*.jpg,*.png,*.bin,tags,**/target/**,**/
 
 set path+=.,**
 
+set guioptions-=e " Workaround for https://github.com/macvim-dev/macvim/issues/1333
+
 " Key mappings
 let mapleader = ","
 
 let g:netrw_liststyle=3 " tree listing
+let g:netrw_fastbrowse=0 " Do not cache directory listings
+autocmd FileType netrw setl bufhidden=wipe " Stop littering my buffer list
 
 nmap <F11> :make!<CR>
 
 nmap <leader>g :execute "grep -w '" . expand("<cword>") . "' ."<CR>
-nmap <leader>f :execute "lgrep -w '" . expand("<cword>") . "' ."<CR>
 nmap <leader>e :execute ":find **/" . expand("<cword>") . "." . expand("%:e")<cr>
 
 nmap <leader><Space> :noh<CR>
@@ -157,6 +161,9 @@ au FileType qf setlocal wrap linebreak
 au filetype java setlocal makeprg=mvn\ -q\ compile\ -f\ pom.xml
 au filetype java setlocal errorformat=[ERROR]\ %f:[%l\\,%v]\ %m
 
+" Used to enable tag matching for XML.
+runtime macros/matchit.vim
+
 " Detect Drools files
 au bufreadpost,filereadpost *.drl set ft=drools
 
@@ -190,6 +197,7 @@ endfunction
 " FZF Setup
 "
 set rtp+=~/.fzf
+set rtp+=/opt/homebrew/opt/fzf
 nmap <leader>p :Files<CR>
 nmap <leader>b :Buffers<CR>
 
@@ -212,6 +220,7 @@ let g:dhall_format=1
 let g:lsp_auto_enable = 1
 let g:lsp_diagnostics_enabled = 0         " disable diagnostics support
 
+" brew install clojure-lsp/brew/clojure-lsp-native   
 if executable('clojure-lsp')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'clojure-lsp',
@@ -220,19 +229,40 @@ if executable('clojure-lsp')
         \ })
 endif
 
+" brew install jdtls
 if executable('jdtls')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'jdtls',
         \ 'cmd': ['jdtls'],
         \ 'allowlist': ['java'],
         \ })
+    autocmd FileType java setlocal omnifunc=lsp#complete
 endif
 
+" yarn global add typescript-language-server typescript 
 if executable('typescript-language-server')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'typescript-language-server',
         \ 'cmd': ['typescript-language-server', '--stdio'],
         \ 'allowlist': ['typescript', 'javascript'],
+        \ })
+endif
+
+" brew install python-lsp-server
+if executable('pylsp')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'pylsp',
+        \ 'cmd': ['pylsp'],
+        \ 'allowlist': ['python'],
+        \ })
+endif
+
+" Manual download from https://github.com/OmniSharp/omnisharp-roslyn
+if executable("OmniSharp")
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'OmniSharp',
+        \ 'cmd': ['OmniSharp', '--languageserver'],
+        \ 'allowlist': ['cs'],
         \ })
 endif
 
