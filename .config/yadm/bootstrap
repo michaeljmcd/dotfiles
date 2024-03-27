@@ -9,6 +9,6 @@ yadm submodule update --recursive --init
 
 # Run FZF installer.
 
-$HOME/.fzf/install
+#$HOME/.fzf/install
 
 mkdir -p $HOME/.tmp
