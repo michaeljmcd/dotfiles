@@ -11,4 +11,4 @@ yadm submodule update --recursive --init
 
 $HOME/.fzf/install
 
-mkdir $HOME/.tmp
+mkdir -p $HOME/.tmp
