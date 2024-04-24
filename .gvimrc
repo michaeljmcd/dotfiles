@@ -3,7 +3,7 @@
 "set guifont=Fira\ Code\ Medium\ 13
 
 if has('macunix')
-    set guifont=FiraCode-Medium:h13
+    set guifont=FiraCode-Medium:h14
 else
     set guifont=Fira\ Code\ Medium\ 13
 endif

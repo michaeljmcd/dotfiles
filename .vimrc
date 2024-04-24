@@ -33,8 +33,9 @@ set background=dark
 "colorscheme citylights " among my favorites
 "colorscheme dracula
 "colorscheme nord
-colorscheme onedark " slate-colored theme
+"colorscheme onedark " slate-colored theme
 "colorscheme tokyonight " A slightly more vibrant dark theme.
+colorscheme dracula
 
 " Green themes
 "colorscheme duotone-darkmeadow
