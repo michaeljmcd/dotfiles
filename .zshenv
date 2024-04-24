@@ -68,36 +68,16 @@ function jepoch {
 EOF
 }
 
-function get_cobol {
-    program_path=${1}
-    svn cat svn://svnprod/app_IndexingHostProgramsFtp/baseline/CobolPrograms/host/${program_path} > $(basename $program_path).cbl
-}
-
-function import_jdk_cert {
-    cert_file="${1}"
-    java_home="$(cygpath -w /cygdrive/c/Program\ Files/Java/jdk1.8.0_101/)"
-    jdk_store="${java_home}/jre/lib/security"
-
-    ${java_home}/bin/keytool.exe -importcert -trustcacerts -file ${cert_file} -alias ${cert_file} -keystore "${jdk_store}"
-}
-
 function plantuml {
     java -jar $HOME/local/opt/plant*.jar $*
-}
-
-function az3 {
-    python3 -m azure.cli $*
-}
-
-function cljs {
-    java -jar `cygpath -w ~/h/local/opt/cljs.jar` $*
 }
 
 function vmd () {
   pandoc $1 | lynx -stdin
 }
-source "$HOME/.cargo/env"
+
+[ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
+
 #if [ -e /Users/jisamm9/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/jisamm9/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 #if [ -e /home/michael/.nix-profile/etc/profile.d/nix.sh ]; then . /home/michael/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-. "$HOME/.cargo/env"
 export JOLIE_HOME="/home/michael/local/lib/jolie"
