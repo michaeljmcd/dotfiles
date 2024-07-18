@@ -110,12 +110,6 @@ export ZSH_DISABLE_COMPFIX=true
 #[ -f "/home/michael/.ghcup/env" ] && source "/home/michael/.ghcup/env" # ghcup-env
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/jisamm9/local/dist/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jisamm9/local/dist/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/jisamm9/local/dist/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jisamm9/local/dist/google-cloud-sdk/completion.zsh.inc'; fi
 #
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
@@ -143,3 +137,13 @@ if [ -e "/Users/jisamm9/local/opt/ImageMagick-7.0.10" ]; then
   export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"
   export PATH="$PATH:$MAGICK_HOME/bin"
 fi
+
+# Add JBang to environment
+alias j!=jbang
+export PATH="$HOME/.jbang/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/jisamm9/local/dist/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jisamm9/local/dist/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/jisamm9/local/dist/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jisamm9/local/dist/google-cloud-sdk/completion.zsh.inc'; fi

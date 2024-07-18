@@ -105,7 +105,7 @@ set errorformat=\ %#%f(%l\\\,%c):\ %m
 
 set wildignore=*.dll,*.pdb,*.nupkg,*.exe,*.jpg,*.png,*.bin,tags,**/target/**,**/node_modules/**
 
-"set grepprg=rg\ --vimgrep\ --no-heading\ -g\ !tags
+set grepprg=rg\ --vimgrep\ --no-heading\ -g\ !tags
 "set grepformat=%f:%l:%c:%m,%f:%l:%m
 
 set path+=.,**
