@@ -62,10 +62,6 @@ function jepoch {
 EOF
 }
 
-function plantuml {
-    java -jar $HOME/local/opt/plant*.jar $*
-}
-
 function vmd () {
   pandoc $1 | lynx -stdin
 }

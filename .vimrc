@@ -152,6 +152,10 @@ au BufRead,BufNewFile *.json         setlocal filetype=javascript
 au BufRead,BufNewFile *.puml         setlocal filetype=plantuml
 au BufRead,BufNewFile *.sw         setlocal filetype=sw
 
+autocmd FileType quint lua vim.lsp.start({name = 'quint', cmd = {'quint-language-server', '--stdio'}, root_dir = vim.fs.dirname()})
+au BufRead,BufNewFile *.qnt  setfiletype quint
+au BufNewFile,BufReadPost *.qnt runtime syntax/quint.vim
+
 au BufEnter *.md setlocal   foldexpr=pandoc#MarkdownLevel() | setlocal foldmethod=expr
 au FileType qf setlocal wrap linebreak 
 
