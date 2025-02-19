@@ -76,3 +76,6 @@
 [submodule ".vim/pack/michael/start/vim-vinegar"]
 	path = .vim/pack/michael/start/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar.git
+[submodule "/Users/jisamm9/.vim/pack/github/start/copilot.vim"]
+	path = /Users/jisamm9/.vim/pack/github/start/copilot.vim
+	url = https://github.com/github/copilot.vim.git
