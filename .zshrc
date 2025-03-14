@@ -148,3 +148,4 @@ if [ -f '/Users/jisamm9/local/dist/google-cloud-sdk/path.zsh.inc' ]; then . '/Us
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/jisamm9/local/dist/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jisamm9/local/dist/google-cloud-sdk/completion.zsh.inc'; fi
 export PATH="/opt/homebrew/opt/sphinx-doc/bin:$PATH"
+alias om='podman run -it --rm -v "$HOME:$HOME" -e "HOME=$HOME" -w "$PWD" -e "DISPLAY=`ifconfig | grep -o "inet [0-9.]*" | grep -Eo "[0-9.]{7,}" | grep -Fv 127.0.0.1 | head -1`:0" --user $UID openmodelica/openmodelica:v1.24.3-gui'
