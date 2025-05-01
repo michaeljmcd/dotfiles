@@ -119,7 +119,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-[[ -f '/Users/jisamm9/.config/broot/launcher/bash/br' ]] && source /Users/jisamm9/.config/broot/launcher/bash/br
+[[ -f "/Users/${USER}/.config/broot/launcher/bash/br" ]] && source /Users/${USER}/.config/broot/launcher/bash/br
 export PATH="/usr/local/opt/krb5/bin:$PATH"
 
 #export PATH=$PATH:~/.vim/pack/michael/start/vim-iced/bin
@@ -132,25 +132,18 @@ eval "$(jenv init -)"
 
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
 
-if [ -e "/Users/jisamm9/local/opt/ImageMagick-7.0.10" ]; then
-  export MAGICK_HOME="/Users/jisamm9/local/opt/ImageMagick-7.0.10"
-  export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"
-  export PATH="$PATH:$MAGICK_HOME/bin"
-fi
-
 # Add JBang to environment
 alias j!=jbang
 export PATH="$HOME/.jbang/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/jisamm9/local/dist/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jisamm9/local/dist/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f "/Users/${USER}/local/dist/google-cloud-sdk/path.zsh.inc" ]; then . "/Users/${USER}/local/dist/google-cloud-sdk/path.zsh.inc"; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/jisamm9/local/dist/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jisamm9/local/dist/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f "/Users/${USER}/local/dist/google-cloud-sdk/completion.zsh.inc" ]; then . "/Users/${USER}/local/dist/google-cloud-sdk/completion.zsh.inc"; fi
 export PATH="/opt/homebrew/opt/sphinx-doc/bin:$PATH"
 alias om='podman run -it --rm -v "$HOME:$HOME" -e "HOME=$HOME" -w "$PWD" -e "DISPLAY=`ifconfig | grep -o "inet [0-9.]*" | grep -Eo "[0-9.]{7,}" | grep -Fv 127.0.0.1 | head -1`:0" --user $UID openmodelica/openmodelica:v1.24.3-gui'
 
 # Use GNU documentation viewers because built-in macOS ones are slow.
-[ -f "$(which gman)" ] && alias man=gman
-[ -f "$(which gapropos)" ] && alias apropos=gapropos
-
+command -v gman 1>/dev/null 2>&1 && alias man=gman
+command -v gapropos 1>/dev/null 2>&1 && alias apropos=gapropos
