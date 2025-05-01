@@ -14,7 +14,6 @@ alias docker=podman
 
 [ -d "/Applications/draw.io.app/Contents/MacOS/" ] && export PATH=$PATH:/Applications/draw.io.app/Contents/MacOS/
 
-#if [ -e /home/michael/.nix-profile/etc/profile.d/nix.sh ]; then . /home/michael/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 export JOLIE_HOME="/home/michael/local/lib/jolie"
 
 function preview_xml {
