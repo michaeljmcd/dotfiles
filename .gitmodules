@@ -85,6 +85,6 @@
 [submodule ".vim/pack/michael/start/vim-ghost"]
 	path = .vim/pack/michael/start/vim-ghost
 	url = https://github.com/raghur/vim-ghost.git
-[submodule "/Users/jisamm9/.vim/pack/michael/start/copilot-chat.vim"]
-	path = /Users/jisamm9/.vim/pack/michael/start/copilot-chat.vim
+[submodule ".vim/pack/michael/start/copilot-chat.vim"]
+	path = .vim/pack/michael/start/copilot-chat.vim
 	url = https://github.com/DanBradbury/copilot-chat.vim.git
