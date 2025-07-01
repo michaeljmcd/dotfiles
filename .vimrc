@@ -7,12 +7,6 @@ filetype plugin on
 filetype detect
 syntax on
 
-" === BEGIN TERM OPTIONS 
-" Mouse support
-set mouse=a
-set ttymouse=sgr
-set balloonevalterm
-
 " Light themes
 
 "set background=light
@@ -93,6 +87,8 @@ set cursorline
 set formatoptions+=t " Autowrap to textwidth
 set formatoptions+=j " Allow comments to be joined cleanly
 
+set popt=syntax:n,number:y,duplex:off,paper:letter
+
 set signcolumn=yes " Always draw sign column. Prevent buffer moving when adding/deleting sign.
 set hidden " Required for operations modifying multiple buffers like rename.
 
@@ -107,8 +103,6 @@ setglobal fileencoding=utf-8
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,latin1
 
-"set errorformat=\ %#%f(%l\\\,%c):\ %m
-
 set wildignore=*.dll,*.pdb,*.nupkg,*.exe,*.jpg,*.png,*.bin,tags,**/target/**,**/node_modules/**
 
 set grepprg=rg\ --vimgrep\ --no-heading\ -g\ !tags
@@ -120,10 +114,10 @@ let mapleader = ","
 
 let g:netrw_liststyle=3 " tree listing
 
-nmap <F11> :make!<CR>
+autocmd Filetype markdown setlocal makeprg=just
 
 nmap <leader>g :execute "grep -w '" . expand("<cword>") . "' ."<CR>
-
+nmap <leader>m :make<CR>
 nmap <leader><Space> :noh<CR>
 
 function! UpdateCtags()
@@ -132,14 +126,13 @@ function! UpdateCtags()
 endfunction
 
 nmap <leader>t :call UpdateCtags()<cr>
+nmap <leader>f :find <cword><cr>
 
 " Java settings
 " See: https://superuser.com/questions/627636/better-syntax-highlighting-for-java-in-vim
 
 let java_highlight_functions = 1
 let java_highlight_all = 1
-" If you are trying this at runtime, you need to reload the syntax file
-"set filetype=java
 
 " Some more highlights, in addition to those suggested by cmcginty
 highlight link javaScopeDecl Statement
@@ -183,10 +176,6 @@ set omnifunc=syntaxcomplete#Complete
 let spiralweb_language = "clojure"
 let spiralweb_backend = "markdown"
 
-set popt=syntax:n,number:y,duplex:off,paper:letter
-
-let g:ultisnips_java_brace_style='nl'
-let g:ultisnips_java_junit='4'
 let g:pandoc_no_folding = 1
 
 command! -nargs=1 -complete=file Ptab :call ProjectTab(<f-args>) 
