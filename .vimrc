@@ -118,6 +118,7 @@ autocmd Filetype markdown setlocal makeprg=just
 
 nmap <leader>g :execute "grep -w '" . expand("<cword>") . "' ."<CR>
 nmap <leader>m :make<CR>
+nmap <leader>f :set foldmethod=syntax foldlevel=2<CR>
 nmap <leader><Space> :noh<CR>
 
 function! UpdateCtags()
@@ -126,7 +127,6 @@ function! UpdateCtags()
 endfunction
 
 nmap <leader>t :call UpdateCtags()<cr>
-nmap <leader>f :find <cword><cr>
 
 " Java settings
 " See: https://superuser.com/questions/627636/better-syntax-highlighting-for-java-in-vim
