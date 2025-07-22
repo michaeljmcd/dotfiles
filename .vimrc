@@ -141,12 +141,21 @@ highlight link javaDocTags PreProc
 
 " Buffer settings
 
-au BufRead,BufNewFile *.xaml         setlocal filetype=xml
-au BufRead,BufNewFile *.aspx         setlocal filetype=xml
-au BufRead,BufNewFile *.ascx         setlocal filetype=xml
-au BufRead,BufNewFile *.json         setlocal filetype=javascript
-au BufRead,BufNewFile *.puml         setlocal filetype=plantuml
-au BufRead,BufNewFile *.sw         setlocal filetype=sw
+au BufRead,BufNewFile *.xaml setlocal filetype=xml
+au BufRead,BufNewFile *.aspx setlocal filetype=xml
+au BufRead,BufNewFile *.ascx setlocal filetype=xml
+au BufRead,BufNewFile *.json setlocal filetype=javascript
+au BufRead,BufNewFile *.puml setlocal filetype=plantuml
+au BufRead,BufNewFile *.sw   setlocal filetype=sw
+
+augroup xml,ui,xhtml,html
+    autocmd!
+    autocmd FileType xml let g:xml_syntax_folding=1
+    autocmd FileType xml setlocal foldmethod=syntax
+    autocmd FileType xml syntax on
+    "autocmd FileType xml :%foldopen!
+    autocmd FileType xml set foldlevel=2
+augroup END
 
 autocmd FileType quint lua vim.lsp.start({name = 'quint', cmd = {'quint-language-server', '--stdio'}, root_dir = vim.fs.dirname()})
 au BufRead,BufNewFile *.qnt  setfiletype quint
