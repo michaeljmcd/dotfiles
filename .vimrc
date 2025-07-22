@@ -114,7 +114,11 @@ let mapleader = ","
 
 let g:netrw_liststyle=3 " tree listing
 
-autocmd Filetype markdown setlocal makeprg=just
+augroup markdown
+    autocmd!
+    autocmd Filetype markdown setlocal makeprg=just
+    autocmd Filetype markdown setlocal tw=120
+augroup END
 
 nmap <leader>g :execute "grep -w '" . expand("<cword>") . "' ."<CR>
 nmap <leader>m :make<CR>
