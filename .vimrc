@@ -118,6 +118,13 @@ augroup markdown
     autocmd!
     autocmd Filetype markdown setlocal makeprg=just
     autocmd Filetype markdown setlocal tw=120
+    autocmd Filetype markdown setlocal spell
+augroup END
+
+augroup tiddlywiki
+    autocmd!
+    autocmd Filetype tiddlywiki setlocal tw=120
+    autocmd Filetype tiddlywiki setlocal spell
 augroup END
 
 nmap <leader>g :execute "grep -w '" . expand("<cword>") . "' ."<CR>
