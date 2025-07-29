@@ -5,7 +5,7 @@ export PATH="$PATH:$HOME/local/opt/sqlpackage"
 
 export EDITOR=vim
 export PAGER=less
-export SHELL=`which zsh`
+#export SHELL=`which zsh`
 
 alias k=kubectl
 alias docker=podman

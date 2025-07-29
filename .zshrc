@@ -100,6 +100,8 @@ source $ZSH/oh-my-zsh.sh
 unsetopt autopushd
 #setopt no_share_history
 
+autoload zmv
+
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!

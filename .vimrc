@@ -103,7 +103,7 @@ setglobal fileencoding=utf-8
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,latin1
 
-set wildignore=*.dll,*.pdb,*.nupkg,*.exe,*.jpg,*.png,*.bin,tags,**/target/**,**/node_modules/**
+set wildignore=*.dll,*.pdb,*.nupkg,*.exe,*.bin,tags,**/target/**,**/node_modules/**
 
 set grepprg=rg\ --vimgrep\ --no-heading\ -g\ !tags
 
