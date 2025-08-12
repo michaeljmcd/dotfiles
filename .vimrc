@@ -175,6 +175,7 @@ au BufNewFile,BufReadPost *.qnt runtime syntax/quint.vim
 au BufEnter *.md setlocal   foldexpr=pandoc#MarkdownLevel() | setlocal foldmethod=expr
 au FileType qf setlocal wrap linebreak 
 
+au BufRead,BufNewFile pom.xml setlocal makeprg=mvn\ -q\ compile\ -f\ pom.xml
 au filetype java setlocal makeprg=mvn\ -q\ compile\ -f\ pom.xml
 au filetype java setlocal errorformat=[ERROR]\ %f:[%l\\,%v]\ %m
 
