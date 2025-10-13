@@ -16,6 +16,10 @@ alias docker=podman
 
 export JOLIE_HOME="/home/michael/local/lib/jolie"
 
+function jj {
+    jobs -d | less
+}
+
 function preview_xml {
     xmllint --format "$1" | pygmentize -l xml | less -R
 }
