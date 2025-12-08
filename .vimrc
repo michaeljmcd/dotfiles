@@ -229,6 +229,7 @@ let g:dhall_format=1
 " LSP Setup
 let g:lsp_auto_enable = 1
 let g:lsp_diagnostics_enabled = 0         " disable diagnostics support
+nmap <leader>r :LspReferences<CR>
 
 if executable('clojure-lsp')
     au User lsp_setup call lsp#register_server({
