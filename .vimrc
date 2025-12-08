@@ -241,7 +241,7 @@ endif
 if executable('jdtls')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'jdtls',
-        \ 'cmd': ['jdtls'],
+        \ 'cmd': ['jdtls', '-data', '.'],
         \ 'allowlist': ['java'],
         \ })
 endif
