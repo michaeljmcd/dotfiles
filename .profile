@@ -4,3 +4,4 @@ export NVM_DIR="$HOME/.nvm"
 
 export NODE_PATH=$NODE_PATH:$(npm root -g)
 . "$HOME/.cargo/env"
+source "$HOME/.cargo/env"

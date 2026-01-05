@@ -228,7 +228,9 @@ let g:dhall_format=1
 
 " LSP Setup
 let g:lsp_auto_enable = 1
-let g:lsp_diagnostics_enabled = 0         " disable diagnostics support
+let g:lsp_diagnostics_enabled = 1
+let g:lsp_log_file = expand('~/vim-lsp.log')
+
 nmap <leader>r :LspReferences<CR>
 
 if executable('clojure-lsp')
