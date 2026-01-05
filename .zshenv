@@ -20,6 +20,16 @@ function jj {
     jobs -d | less
 }
 
+function tw-date {
+    DATE_EXEC="date"
+
+    if [[ "$(uname)" == "Darwin" ]]; then
+        DATE_EXEC="gdate"
+    fi
+
+    ${DATE_EXEC} -u +%Y%0m%0d%0H%0M%0S000
+}
+
 function preview_xml {
     xmllint --format "$1" | pygmentize -l xml | less -R
 }
