@@ -88,3 +88,6 @@
 [submodule ".vim/pack/michael/start/copilot-chat.vim"]
 	path = .vim/pack/michael/start/copilot-chat.vim
 	url = https://github.com/DanBradbury/copilot-chat.vim.git
+[submodule ".vim/pack/michael/start/maven-compiler.vim"]
+	path = .vim/pack/michael/start/maven-compiler.vim
+	url = https://github.com/JalaiAmitahl/maven-compiler.vim.git
