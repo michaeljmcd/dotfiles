@@ -91,3 +91,6 @@
 [submodule ".vim/pack/michael/start/maven-compiler.vim"]
 	path = .vim/pack/michael/start/maven-compiler.vim
 	url = https://github.com/JalaiAmitahl/maven-compiler.vim.git
+[submodule ".vim/pack/michael/start/everforest"]
+	path = .vim/pack/michael/start/everforest
+	url = https://github.com/sainnhe/everforest

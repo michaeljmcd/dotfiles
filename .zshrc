@@ -62,7 +62,7 @@ ZSH_THEME="gentoo"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(kubectl fossil)
+plugins=(kubectl fossil vi-mode)
 
 # Removing git because its aliases mess with Gambit.
 
@@ -101,6 +101,12 @@ unsetopt autopushd
 #setopt no_share_history
 
 autoload zmv
+
+# Other configuration
+
+#bindkey -v # Enable Vi mode
+
+# Shared paths
 
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
 

@@ -255,6 +255,15 @@ if executable('jdtls')
         \ })
 endif
 
+" C#: https://github.com/razzmatazz/csharp-language-server
+if executable('csharp-ls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'csharp-ls',
+        \ 'cmd': ['csharp-ls'],
+        \ 'allowlist': ['cs'],
+        \ })
+endif
+
 if executable('typescript-language-server')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'typescript-language-server',
