@@ -78,3 +78,7 @@ EOF
 function vmd () {
   pandoc $1 | lynx -stdin
 }
+
+function srcenv {
+    export $(cat .env | xargs)
+}
