@@ -51,6 +51,8 @@ set shell=/bin/zsh
 set guioptions-=m
 set guioptions-=T
 
+set shortmess-=S 
+
 "set virtualedit=all
 set hidden
 set wildmenu
