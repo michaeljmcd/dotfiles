@@ -20,6 +20,8 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="gentoo"
 #SPACESHIP_BATTERY_SHOW=false
 
+#export PROMPT="%F{green%}%~/ %F{blue%}%#%F{white%} "
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 

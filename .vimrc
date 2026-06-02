@@ -221,6 +221,9 @@ nmap <leader>b :Buffers<CR>
 
 " LSC Setup
 
+let g:lsp_use_native_client = 1
+" Performance boost in vim
+
 let g:lsc_server_commands = {
 \    'clojure': 'clojure-lsp',
 \    'dhall': 'dhall-lsp-server',
@@ -236,7 +239,9 @@ let g:dhall_format=1
 
 " LSP Setup
 let g:lsp_auto_enable = 1
-let g:lsp_diagnostics_enabled = 1
+let g:lsp_diagnostics_enabled = 0
+let g:lsp_diagnostics_highlights_enabled = 0
+let g:lsp_diagnostics_virtual_text_enabled = 0
 let g:lsp_log_file = expand('~/vim-lsp.log')
 
 nmap <leader>r :LspReferences<CR>
@@ -261,7 +266,7 @@ endif
 if executable('csharp-ls')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'csharp-ls',
-        \ 'cmd': ['csharp-ls'],
+        \ 'cmd': ['csharp-ls', '-s', '*.sln', '--rpclog', '~/csharp-ls-rpc.log'],
         \ 'allowlist': ['cs'],
         \ })
 endif
