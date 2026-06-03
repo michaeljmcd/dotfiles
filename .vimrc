@@ -263,10 +263,11 @@ if executable('jdtls')
 endif
 
 " C#: https://github.com/razzmatazz/csharp-language-server
+"        \ 'cmd': ['csharp-ls', '-s', expand('*.sln'), '--rpclog', 'csharp-ls-rpc.log'],
 if executable('csharp-ls')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'csharp-ls',
-        \ 'cmd': ['csharp-ls', '-s', '*.sln', '--rpclog', '~/csharp-ls-rpc.log'],
+        \ 'cmd': {si->['csharp-ls', '-s', expand('*.sln'), '--rpclog', 'csharp-ls-rpc.log']},
         \ 'allowlist': ['cs'],
         \ })
 endif
