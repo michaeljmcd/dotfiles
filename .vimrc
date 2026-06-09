@@ -219,25 +219,13 @@ set rtp+=~/.fzf
 nmap <leader>p :Files<CR>
 nmap <leader>b :Buffers<CR>
 
-" LSC Setup
-
-let g:lsp_use_native_client = 1
-" Performance boost in vim
-
-let g:lsc_server_commands = {
-\    'clojure': 'clojure-lsp',
-\    'dhall': 'dhall-lsp-server',
-\    'java': 'jdtls',
-\ }
-
-let g:lsc_auto_map=v:true
-
 " Dhall
-"
 " comment the next line to disable automatic format on save
 let g:dhall_format=1
 
 " LSP Setup
+" Performance boost in vim
+let g:lsp_use_native_client = 1
 let g:lsp_auto_enable = 1
 let g:lsp_diagnostics_enabled = 0
 let g:lsp_diagnostics_highlights_enabled = 0
@@ -257,7 +245,7 @@ endif
 if executable('jdtls')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'jdtls',
-        \ 'cmd': ['jdtls', '-data', '.'],
+        \ 'cmd': ['jdtls', '--jvm-arg=-javaagent:' . expand('~/local/opt/lombok.jar'), '-data', expand('~/.cache/jdtls/' . getcwd())],
         \ 'allowlist': ['java'],
         \ })
 endif
