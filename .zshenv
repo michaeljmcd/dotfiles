@@ -27,7 +27,7 @@ function tw-date {
         DATE_EXEC="gdate"
     fi
 
-    ${DATE_EXEC} -u +%Y%0m%0d%0H%0M%0S000
+    ${DATE_EXEC} -u +%Y%0m%0d%0H%0M
 }
 
 function preview_xml {
@@ -36,18 +36,6 @@ function preview_xml {
 
 function format_xml {
     cp =(xmllint --format "$1") "$1"
-}
-
-function view_code {
-    pygmentize -O encoding=utf-8 "$1" | less -R
-}
-
-function xpath_grep {
-    xmlstarlet sel -t -c $1 -n $*[2,${#*}]
-}
-
-function xpath_find {
-    xmlstarlet sel -t -m $1 -n -f $*[2,${#*}]
 }
 
 function update_tags {
@@ -59,12 +47,6 @@ function update_tags {
     ctags -R .
 }
 
-function page-file {
-    filename=${1}
-
-    find . -name "${1}" | xargs less
-}
-
 function jepoch {
     input_date=${1}
 
@@ -73,10 +55,6 @@ function jepoch {
     bc -q <<EOF
     ${in_seconds}*1000
 EOF
-}
-
-function vmd () {
-  pandoc $1 | lynx -stdin
 }
 
 function srcenv {

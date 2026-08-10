@@ -17,7 +17,8 @@ export ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="simple"
 #ZSH_THEME="mh"
 #ZSH_THEME="kolo" # Simple prompt with a % prompt. Only shows current directory name, not full path.
-ZSH_THEME="gentoo"
+#ZSH_THEME="gentoo"
+ZSH_THEME="imajes"
 #SPACESHIP_BATTERY_SHOW=false
 
 #export PROMPT="%F{green%}%~/ %F{blue%}%#%F{white%} "
